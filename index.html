@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OneTools — All Your Daily Tools in One App</title>
+<style>
+  :root {
+    --bg: #0a0e17;
+    --surface: #131a29;
+    --border: #232d42;
+    --blue: #3b82f6;
+    --purple: #8b5cf6;
+    --cyan: #22d3ee;
+    --text: #e8ecf4;
+    --muted: #8b95ab;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(139, 92, 246, 0.12);
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    color: var(--cyan);
+    padding: 6px 14px; border-radius: 999px;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
+  }
+  h1 {
+    font-size: 40px; font-weight: 800; margin: 20px 0 8px;
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .tagline { color: var(--muted); font-size: 17px; margin-bottom: 32px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 20px 22px; margin-bottom: 14px;
+    display: flex; align-items: flex-start; gap: 14px;
+  }
+  .icon {
+    width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+  .icon.blue { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+  .icon.cyan { background: linear-gradient(135deg, #22d3ee, #3b82f6); }
+  .icon.purple { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+  .card h3 { margin: 0 0 4px; font-size: 16px; }
+  .card p { margin: 0; color: var(--muted); font-size: 14px; }
+  section { margin-top: 56px; }
+  h2 { font-size: 22px; margin-bottom: 14px; }
+  p.body { color: #b8c0d4; font-size: 15px; }
+  .foot {
+    margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+  a { color: var(--cyan); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="badge">🛡️ 100% Offline &amp; Private</span>
+    <h1>OneTools</h1>
+    <p class="tagline">All your daily tools in one app — Calculator, QR Code Suite, and Password Generator, with nothing ever leaving your device.</p>
+
+    <div class="card">
+      <div class="icon blue">🧮</div>
+      <div><h3>Calculator</h3><p>Basic arithmetic operations with a clean, modern display.</p></div>
+    </div>
+    <div class="card">
+      <div class="icon cyan">▦</div>
+      <div><h3>QR Code Suite</h3><p>Generate custom QR codes instantly for any text or link.</p></div>
+    </div>
+    <div class="card">
+      <div class="icon purple">🔒</div>
+      <div><h3>Password Generator</h3><p>Strong, random passwords with one-tap copy and strength presets.</p></div>
+    </div>
+
+    <section id="privacy">
+      <h2>Privacy Policy</h2>
+      <p class="body">OneTools respects your privacy. All calculations, generated passwords, and scanned QR codes remain strictly on your device. We do not collect, transmit, or process any personal data on external servers.</p>
+      <p class="body"><strong>Camera Permission:</strong> used solely for live QR code scanning. Video frames are analyzed locally in memory and are never recorded or transmitted.</p>
+      <p class="body"><strong>Zero Data Collection:</strong> your calculation history, generated passwords, and scanned QR codes never leave your device.</p>
+    </section>
+
+    <section id="support">
+      <h2>Support</h2>
+      <p class="body">Questions or issues? Reach out at <a href="mailto:onetoolsonetools@gmail.com">onetoolsonetools@gmail.com</a></p>
+    </section>
+
+    <div class="foot">
+      <span>© 2026 OneTools</span>
+      <span>Independent developer</span>
+    </div>
+  </div>
+</body>
+</html>
