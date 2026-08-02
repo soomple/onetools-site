@@ -37,12 +37,24 @@
     background: linear-gradient(90deg, var(--blue), var(--purple));
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
-  .tagline { color: var(--muted); font-size: 17px; margin-bottom: 32px; }
+  .tagline { color: var(--muted); font-size: 17px; margin-bottom: 24px; }
+
+  .download-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    color: #fff; font-weight: 700; font-size: 16px;
+    padding: 14px 28px; border-radius: 12px; text-decoration: none;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.25);
+  }
+  .download-btn:hover { opacity: 0.92; }
+  .download-btn svg { width: 20px; height: 20px; }
+
   .card {
     background: var(--surface); border: 1px solid var(--border);
     border-radius: 16px; padding: 20px 22px; margin-bottom: 14px;
-    display: flex; align-items: flex-start; gap: 14px;
   }
+  .card-head { display: flex; align-items: flex-start; gap: 14px; }
   .icon {
     width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
@@ -52,7 +64,13 @@
   .icon.cyan { background: linear-gradient(135deg, #22d3ee, #3b82f6); }
   .icon.purple { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
   .card h3 { margin: 0 0 4px; font-size: 16px; }
-  .card p { margin: 0; color: var(--muted); font-size: 14px; }
+  .card p.desc { margin: 0; color: var(--muted); font-size: 14px; }
+  .benefit {
+    margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border);
+    color: #b8c0d4; font-size: 14px;
+  }
+  .benefit strong { color: var(--text); }
+
   section { margin-top: 56px; }
   h2 { font-size: 22px; margin-bottom: 14px; }
   p.body { color: #b8c0d4; font-size: 15px; }
@@ -70,18 +88,46 @@
     <h1>OneTools</h1>
     <p class="tagline">All your daily tools in one app — Calculator, QR Code Suite, and Password Generator, with nothing ever leaving your device.</p>
 
-    <div class="card">
-      <div class="icon blue">🧮</div>
-      <div><h3>Calculator</h3><p>Basic arithmetic operations with a clean, modern display.</p></div>
-    </div>
-    <div class="card">
-      <div class="icon cyan">▦</div>
-      <div><h3>QR Code Suite</h3><p>Generate custom QR codes instantly for any text or link.</p></div>
-    </div>
-    <div class="card">
-      <div class="icon purple">🔒</div>
-      <div><h3>Password Generator</h3><p>Strong, random passwords with one-tap copy and strength presets.</p></div>
-    </div>
+    <a class="download-btn" href="https://github.com/soomple/OneTools/releases/download/v1.0/OneTools.apk" id="download-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/>
+      </svg>
+      Download APK
+    </a>
+
+    <section id="tools" style="margin-top: 0;">
+      <h2>Every Tool, Explained</h2>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="icon blue">🧮</div>
+          <div><h3>Calculator</h3><p class="desc">Basic arithmetic operations with a clean, modern display.</p></div>
+        </div>
+        <div class="benefit">
+          <strong>Why it's useful:</strong> A fast, distraction-free calculator for everyday math — no ads blocking the screen, no unnecessary permissions, and it works instantly even with no internet connection.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="icon cyan">▦</div>
+          <div><h3>QR Code Suite</h3><p class="desc">Generate custom QR codes instantly for any text or link.</p></div>
+        </div>
+        <div class="benefit">
+          <strong>Why it's useful:</strong> Turn any link, Wi-Fi password, or note into a QR code in seconds — perfect for sharing your social media, a business card, or a product link without typing anything out. Copy or share the code directly from the app.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="icon purple">🔒</div>
+          <div><h3>Password Generator</h3><p class="desc">Strong, random passwords with one-tap copy and strength presets.</p></div>
+        </div>
+        <div class="benefit">
+          <strong>Why it's useful:</strong> Create secure, hard-to-guess passwords for any account in one tap — adjust the length, choose which character types to include, and see the real-time strength rating before you copy it. All generated locally, never stored or sent anywhere.
+        </div>
+      </div>
+    </section>
 
     <section id="privacy">
       <h2>Privacy Policy</h2>
